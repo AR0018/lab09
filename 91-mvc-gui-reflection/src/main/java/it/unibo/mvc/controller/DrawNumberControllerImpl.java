@@ -38,9 +38,7 @@ public final class DrawNumberControllerImpl implements DrawNumberController {
 
     @Override
     public void newAttempt(final int n) {
-        //TODO: notify all the views to display the new result (attempt can only be called once)
-        DrawResult res;
-        res = model.attempt(n);
+        final DrawResult res = model.attempt(n);
         if(views.isEmpty()) {
             throw new IllegalStateException("There has to be at least one view");
         }
