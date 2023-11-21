@@ -26,10 +26,10 @@ public final class SimpleGUI {
     private final Controller controller = new Controller();
 
     public SimpleGUI() {
-        JPanel canvas = new JPanel();
+        final JPanel canvas = new JPanel();
         canvas.setLayout(new BorderLayout());
-        JTextArea text = new JTextArea();
-        JButton save = new JButton("Save");
+        final JTextArea text = new JTextArea();
+        final JButton save = new JButton("Save");
         canvas.add(text, BorderLayout.CENTER);
         canvas.add(save, BorderLayout.SOUTH);
         frame.setContentPane(canvas);
@@ -38,7 +38,7 @@ public final class SimpleGUI {
         save.addActionListener(new ActionListener() {
 
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(final ActionEvent e) {
                 try {
                     controller.writeOnFile(text.getText());
                 } catch (final IOException e1) {
