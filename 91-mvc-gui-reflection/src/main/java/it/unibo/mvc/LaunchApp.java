@@ -40,10 +40,8 @@ public final class LaunchApp {
             InvocationTargetException {
         final var model = new DrawNumberImpl();
         final DrawNumberController app = new DrawNumberControllerImpl(model);
-        final Class<?> c1 = Class.forName(CLASS_NAME1);
-        final Constructor<?> constr1 = c1.getConstructor();
-        final Class<?> c2 = Class.forName(CLASS_NAME2);
-        final Constructor<?> constr2 = c2.getConstructor();
+        final Constructor<?> constr1 = Class.forName(CLASS_NAME1).getConstructor();
+        final Constructor<?> constr2 = Class.forName(CLASS_NAME2).getConstructor();
         for (int i = 0; i < 3; i++) {
             app.addView((DrawNumberView)constr1.newInstance());
             app.addView((DrawNumberView)constr2.newInstance());
