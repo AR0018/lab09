@@ -49,6 +49,9 @@ public final class SimpleGUIWithFileChooser {
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        /*
+         * Handlers
+         */
         save.addActionListener(new ActionListener() {
 
             @Override

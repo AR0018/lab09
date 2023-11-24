@@ -35,6 +35,9 @@ public final class SimpleGUI {
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        /*
+         * Handlers
+         */
         save.addActionListener(new ActionListener() {
 
             @Override

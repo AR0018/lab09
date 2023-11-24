@@ -50,7 +50,7 @@ public class Controller {
      * @param content
      * @throws IOException
      */
-    public void writeOnFile(String content) throws IOException {
+    public void writeOnFile(final String content) throws IOException {
         try(BufferedWriter os = new BufferedWriter(
             new OutputStreamWriter(
                 new FileOutputStream(this.currentFile.getAbsolutePath()), StandardCharsets.UTF_8))) {
